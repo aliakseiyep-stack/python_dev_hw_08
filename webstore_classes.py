@@ -1,30 +1,36 @@
 class Product:
+
+  product_name: str = None
+  __product_price: str = None
+
+  def __init(self, name, price):
+    self.__product_name = name
+    self.__product_price = price
+
+  @property
+  def product_name(self)->str:
+    return self.__product_name
   
-  def __init__(self, product_name, product_price):
-    self.product_name = product_name
-    self.product_price = product_price
+  @product_name.setter
+  def product_name(self, name):
+    if name:
+      self.__product_name = name
+    else:
+      print("Product name not valid.") 
+
+  @property
+  def product_price(self)->float:
+    return self.__product_price
+  
+  @product_price.setter
+  def product_price(self, price):
+    if price >= 0:
+      self.__product_price = price
+    else:
+      print("Product price is not valid.")
+  
 
 
 class Customer:
-  orders = []
-  def __init__(self, customer_name):
-    self.customer_name = customer_name
-    
-  def add_order(self, order: Order):
-    self.orders.append(order)
-
-
-class Order:
-  
-  products = []
-
-  def add_pruduct(self, product: Product):
-    self.products.append(product)
-
-
-class Discount:
-
-  def __init__(self, discount_description, discount_percent):
-    self.description = discount_description
-    self.discount_percent = discount_percent
-
+  __name = "Guest"
+  __orders = []
