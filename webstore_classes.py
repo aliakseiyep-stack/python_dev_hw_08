@@ -3,9 +3,10 @@ class Product:
   product_name: str = None
   __product_price: str = None
 
-  def __init(self, name, price):
-    self.__product_name = name
-    self.__product_price = price
+  def __init__(self, name, price):
+    
+    
+    
 
   @property
   def product_name(self)->str:
@@ -16,7 +17,7 @@ class Product:
     if name:
       self.__product_name = name
     else:
-      print("Product name not valid.") 
+      print("Product name is blank.") 
 
   @property
   def product_price(self)->float:
@@ -27,7 +28,10 @@ class Product:
     if price >= 0:
       self.__product_price = price
     else:
-      print("Product price is not valid.")
+      print("Product price must be >=0.")
+      
+      
+      
   
 
 
