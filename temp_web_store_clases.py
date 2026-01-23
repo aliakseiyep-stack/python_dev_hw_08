@@ -35,8 +35,10 @@ class Customer:
   __customer_name = "Guest"
   __customer_orders = []
 
-  @property
+  @property  
   def customer_name(self)->str:
-    return self.__customer_name = name
+    return self.__customer_name
+  
+  def 
 
 
